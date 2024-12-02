@@ -14,7 +14,7 @@
         .category-container {
             display: flex;
             flex-wrap: wrap;
-            gap: 15px; /* 버튼 간 간격 조정 */
+            gap: 20px; /* 버튼 간 간격 조정 */
             justify-content: center;
             margin-top: 20px; /* 상단 여백 조정 */
         }
@@ -30,7 +30,22 @@
             color: #333;
             cursor: pointer; /* 마우스 오버 시 포인터 커서 이미지 */
             text-align: center;
+            margin-left: 3px;  /* 버튼 왼쪽 간격 조정 */
+    		margin-right: 3px; /* 버튼 오른쪽 간격 조정 */
         }
+        .first-row {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    		/* 두 번째 행 (문서 작성, 단순 서비스, 기타) */
+    		.second-row {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+        
 
         /* 정렬-박스 설정 */
         .sorting-container {
@@ -136,12 +151,16 @@
 
     <!-- 카테고리 버튼 -->
     <div class="category-container">
+        <div class="first-row">
         <div class="category-button <%= category.equals("전체") ? "selected" : "" %>" onclick="updatePage('전체', '<%= sort %>')">전체</div>
         <div class="category-button <%= category.equals("물품 대여") ? "selected" : "" %>" onclick="updatePage('물품 대여', '<%= sort %>')">물품 대여</div>
         <div class="category-button <%= category.equals("배달") ? "selected" : "" %>" onclick="updatePage('배달', '<%= sort %>')">배달</div>
+        </div>
+    <div class="second-row">
         <div class="category-button <%= category.equals("문서 작성") ? "selected" : "" %>" onclick="updatePage('문서 작성', '<%= sort %>')">문서 작성</div>
         <div class="category-button <%= category.equals("단순 서비스") ? "selected" : "" %>" onclick="updatePage('단순 서비스', '<%= sort %>')">단순 서비스</div>
         <div class="category-button <%= category.equals("기타") ? "selected" : "" %>" onclick="updatePage('기타', '<%= sort %>')">기타</div>
+        </div>
     </div>
 
     <!-- 정렬 버튼 -->

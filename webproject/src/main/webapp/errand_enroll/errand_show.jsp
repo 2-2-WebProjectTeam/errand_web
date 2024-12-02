@@ -85,20 +85,23 @@
             margin-bottom : 100px;
         }
         .sub-button {
-            width: 200px;
-            padding: 20px;
+            width: 130px;
+            padding: 10px;
             border: none;
-            border-radius: 20px;
+            border-radius: 15px;
             background-color: #fde7cd;
-            font-size: 40px;
+            font-size: 20px;
             cursor: pointer;
             color : #F7A239;
-            margin-top : 400px;
+            margin-top : 150px;
             display : block;
             margin-left: auto; 
             margin-right: auto; 
             text-align:center;
+            margin-bottom: 100px;
         }
+        .container{
+        text-align : center;}
         .submit-button:hover {
             background-color: #ff9800;
         }
@@ -159,8 +162,8 @@
     	if(userID!=null&&userID.equals(errand.getEnrollID())){
     %>
     	<div class="container">
-	    	<a href="update.jsp?errandID=<%=errandID%>" class = "sub-button">수정</a>
-	    	<a href="deleteAction.jsp?errandID=<%=errandID%>" class = "sub-button">삭제</a>
+	    	<a href="update.jsp?errandID=<%=errandID%>" class = "sub-button" style="display: inline-block; margin-right: 20px;">수정</a>
+	    	<a href="deleteAction.jsp?errandID=<%=errandID%>" class = "sub-button" style="display: inline-block;">삭제</a>
 	    </div>
    	<%
    		}else if(userID != null){
